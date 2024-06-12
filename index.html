@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health and Wellness Survey</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+  </head>
+  <body class="container my-3 text-light bg-dark">
+    <header class="text-center">
+      <h1 id="title">Health and Wellness Survey</h1>
+      <p id="description">
+        Please take a few moments to complete this survey to help us understand
+        your health and wellness needs.
+      </p>
+    </header>
+    <main class="px-lg-5 py-lg-3">
+      <form class="needs-validation" action="" id="survey-form" novalidate>
+        <div class="form-group mb-3">
+          <label class="form-label" for="name" id="name-label"
+            >Enter your full name</label
+          >
+          <input
+            class="form-control"
+            type="text"
+            id="name"
+            placeholder="E.g. John Doe"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your full name</div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label" for="email" id="email-label"
+            >Enter your email</label
+          >
+          <input
+            class="form-control"
+            type="email"
+            id="email"
+            placeholder="E.g. johndoe@example.com"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a valid email</div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label" for="number" id="number-label"
+            >Enter your age (optional)</label
+          >
+          <input
+            class="form-control"
+            type="number"
+            id="number"
+            min="13"
+            max="99"
+            placeholder="E.g. 34"
+          />
+          <div class="invalid-feedback">
+            Please your age must be between 13 and 99
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label" for="dropdown"
+            >How often do you exercise?</label
+          >
+          <select class="form-select" id="dropdown" name="exercise-frequency">
+            <option value="daily">Daily</option>
+            <option value="few_times_week">A few times a week</option>
+            <option value="once_week">Once a week</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Do you follow a specific diet?</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="diet_yes"
+              name="diet"
+              value="yes"
+            />
+            <label class="form-check-label" for="diet_yes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="diet_no"
+              name="diet"
+              value="no"
+              checked
+            />
+            <label class="form-check-label" for="diet_no">No</label>
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label"
+            >Which of the following health activities do you regularly
+            participate in? (Select all that apply)</label
+          >
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="yoga"
+              name="activities"
+              value="yoga"
+            />
+            <label class="form-check-label" for="yoga">Yoga</label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="running"
+              name="activities"
+              value="running"
+            />
+            <label class="form-check-label" for="running">Running</label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="gym"
+              name="activities"
+              value="gym"
+            />
+            <label class="form-check-label" for="gym">Gym Workouts</label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="meditation"
+              name="activities"
+              value="meditation"
+            />
+            <label class="form-check-label" for="meditation">Meditation</label>
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label" for="health-goals"
+            >What are your current health and wellness goals?</label
+          >
+          <textarea
+            class="form-control"
+            id="health-goals"
+            name="health-goals"
+            rows="4"
+            placeholder="Please describe your health and wellness goals here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary mb-3" type="submit" id="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer class="text-center">
+      <p>
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Health and Wellness Survey. Created By
+        <a class="text-light" href="https://github.com/GDA0">Gideon D. Adeti</a
+        >. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
